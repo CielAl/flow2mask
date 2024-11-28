@@ -1,3 +1,8 @@
+"""Interface of the seed.
+TODO: 3d dok sparse matrix.
+Author: cielmercy@gmail.com
+
+"""
 from typing import Protocol, runtime_checkable, Union, Tuple, TYPE_CHECKING
 import numpy as np
 if TYPE_CHECKING:

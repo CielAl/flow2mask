@@ -1,3 +1,8 @@
+"""Simple visit table implementation.
+TODO: 3d dok sparse matrix.
+Author: cielmercy@gmail.com
+
+"""
 from _operator import mul
 from functools import reduce
 from typing import Tuple

@@ -1,3 +1,8 @@
+"""Abstraction of seed growth.
+
+Author: cielmercy@gmail.com
+
+"""
 from typing import Union, Tuple, List, Optional, Dict
 from .base import BaseSeed
 from .visit_table import VisitedTable
@@ -346,7 +351,6 @@ class Seed(BaseSeed):
         for step in range(neighbor_degree):
             print(f"iter {step}")
             print(f"Seed size: {seeds.coord.shape}")
-            breakpoint()
             # register the center of cube
             seeds.register_to_table(table)
             neighbors = seeds.expansion(expand, check_boundary=True, ub=shape, lb=0)
@@ -398,7 +402,7 @@ class Seed(BaseSeed):
         return seed_map
 
 
-class SeedList:
+class SeedList(BaseSeed):
     """Vectorization helper class for a list of Seed objects. Simulate relevant interfaces of Seed class.
 
     Can be merged to a single Seed
